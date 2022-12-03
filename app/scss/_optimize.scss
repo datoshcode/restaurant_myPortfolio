@@ -1,8 +1,9 @@
 /* ============== optimize.css (Reset and optimization CSS) ================= */
+
 /*
 Author: Andriy Ovcharov;
 E-mail: datoshcode@gmail.com;
-Build date: 21.09.2022.
+Build date: 01.12.2022.
 */
 
 /* ========================  Global styles  ================================= */
@@ -25,13 +26,18 @@ html, body {
   overflow-x: hidden;
 }
 
-html { -webkit-text-size-adjust: 100%; }
+html { 
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
 
 body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
+  line-height: 1.2;
   letter-spacing: 0.01em;
 }
 /* ========================  Global styles  /END ============================ */
@@ -63,7 +69,7 @@ address, caption, cite, code, dfn, em, h1, h2, h3, h4, h5, h6, strong, th, var {
 button, input, optgroup, select, textarea {
   font-family: inherit;
   font-size: inherit;
-  line-height: 1.15;
+  line-height: 1.2;
   margin: 0;
 }
 
@@ -149,6 +155,8 @@ a {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+  line-height: inherit;
+  
 }
 
 a:not([class]) { text-decoration-skip-ink: auto; }
@@ -257,4 +265,5 @@ ul ul { font-size: 100%; }
 }
 
 [type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
 /* ============ optimize.css (Reset and optimization CSS) /END ============== */

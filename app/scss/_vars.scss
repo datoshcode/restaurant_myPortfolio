@@ -1,31 +1,59 @@
 // -------------- Colors -----------------
-// color: $blue;
+// color: $color-default;
 
-// $default: #505050;
-// $black-bg: #262626;
-// $grey: #a4a4a4;
-// $white: #fff;
-// $accent: #ff0036;
-
+$color-default: rgb(92, 101, 116);
+$color-black: rgb(16, 26, 36);
+$color-white: rgb(255, 255, 255);
+$color-accent: rgb(234, 109, 39);
+$color-yellow: rgb(255, 187, 0);
 
 // -------------- Fonts ------------------
 // @include lato-400;
 
-// @mixin lato-400 {
-//   font-family: "Lato-Regular", Arial, Helvetica, sans-serif;
-//   font-weight: 400;
-//   font-style: normal;
-// }
+@mixin inter-400 {
+  font-family: "Inter-Regular", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+@mixin inter-700 {
+  font-family: "Inter-Regular", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin davidLibre-500 {
+  font-family: "DavidLibre-Medium", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin davidLibre-700 {
+  font-family: "DavidLibre-Bold", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
 // ----------------- Buttons ------------------
 
-// @mixin about-btn {
-//   @include lato-400;
-//   font-size: 1.25rem;
-//   color: $white;
-//   text-transform: uppercase;
-//   padding: 0.875em 2.125em;
-//   background-color: $black-bg;
-// }
+// @include book-btn;
 
+@mixin book-btn {
+  @include davidLibre-500;
+  font-size: 1.25rem;
+  color: $color-white;
+  padding: 0.875em 2.25em;
+  background-color: $color-accent;
+  border-bottom-right-radius: 1.25em;
+  border-top-left-radius: 1.25em;
+}
+
+@mixin menu-btn {
+  @include davidLibre-500;
+  font-size: 1.25rem;
+  color: $color-white;
+  padding: 0.875em 2.25em;
+  background-color: $color-black;
+  border-bottom-right-radius: 1.25em;
+  border-top-left-radius: 1.25em;
+}
