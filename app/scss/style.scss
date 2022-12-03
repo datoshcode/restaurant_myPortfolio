@@ -1,0 +1,129 @@
+// ------------------ Імпорт scss файлів ---------------
+
+@import "vars";
+@import "fonts";
+@import "optimize";
+@import "global";
+
+// ----------------------- Базові стилі ----------------
+
+:root {
+  font-size: 0.75rem; // 12px
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 0.875rem; // 14px
+  }
+}
+
+@media (min-width: 1150px) {
+  :root {
+    font-size: 1rem; // 16px
+  }
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3.9375em;
+    margin: 0 auto;
+  }
+  &__menu-list {
+    display: flex;
+    gap: 0 2.8125em;
+  }
+}
+
+.promo {
+  background-image: url("../images/promo/promo-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 150px;
+
+  &__inner {
+    padding: 22.25em 0.625em 1.25em;
+    display: flex;
+    gap: 0 1em;
+    justify-content: center;
+    background-image: url("../images/promo/promo-bg.png");
+    background-repeat: no-repeat;
+    background-size: 58%;
+    background-position: top 83% right 4%;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 1.5em;
+      left: 37em;
+      height: 364px;
+      width: 364px;
+      background-image: url("../images/promo/promo-top.png");
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 24.5em;
+      left: 5em;
+      height: 112px;
+      width: 113px;
+      background-image: url("../images/promo/slogan.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__item {
+    flex-basis: 620px;
+  }
+  &__item-title {
+    @include davidLibre-700;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.375rem;
+    color: $color-black;
+    line-height: 1;
+    margin-top: 3em;
+  }
+  &__item-tex {
+    margin-top: 2.375em;
+    max-width: 426px;
+  }
+  &__item-buttons {
+    margin-top: 3.125em;
+    display: flex;
+    gap: 0 25px;
+  }
+
+  &__item-socials {
+    margin-top: 3.875em;
+    display: flex;
+    gap: 0 17px;
+    position: relative;
+  }
+
+  &__item-socials::after {
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: 190px;
+    height: 3px;
+    width: 143px;
+    background-color: #d9d9d9;
+  }
+  &__item-img {
+    object-fit: cover;
+  }
+}
+
+// --------------------- Адаптив сайту ------------------
+@import "media";
