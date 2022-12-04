@@ -1,8 +1,11 @@
 // ------------------ Імпорт scss файлів ---------------
 
 @import "vars";
+
 @import "fonts";
+
 @import "optimize";
+
 @import "global";
 
 // ----------------------- Базові стилі ----------------
@@ -23,60 +26,67 @@
   }
 }
 
+// Header
 .header {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 3.9375em;
     margin: 0 auto;
+    padding-top: 3.9375em;
   }
+
   &__menu-list {
     display: flex;
     gap: 0 2.8125em;
   }
 }
 
+// Header /end -----------------------
+
+// Promo -----------------------------
 .promo {
+  padding-bottom: 150px;
   background-image: url("../images/promo/promo-bg.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
-  padding-bottom: 150px;
+  background-size: cover;
 
   &__inner {
-    padding: 22.25em 0.625em 1.25em;
+    position: relative;
     display: flex;
     gap: 0 1em;
     justify-content: center;
+    padding: 22.25em 0.625em 1.25em;
     background-image: url("../images/promo/promo-bg.png");
     background-repeat: no-repeat;
-    background-size: 58%;
     background-position: top 83% right 4%;
-    position: relative;
+    background-size: 58%;
+
     &::after {
       position: absolute;
-      content: "";
       bottom: 1.5em;
       left: 37em;
-      height: 364px;
       width: 364px;
+      height: 364px;
+      content: "";
       background-image: url("../images/promo/promo-top.png");
       background-repeat: no-repeat;
     }
 
     &::before {
       position: absolute;
-      content: "";
       top: 24.5em;
       left: 5em;
-      height: 112px;
       width: 113px;
+      height: 112px;
+      content: "";
       background-image: url("../images/promo/slogan.svg");
       background-repeat: no-repeat;
     }
@@ -85,45 +95,181 @@
   &__item {
     flex-basis: 620px;
   }
+
   &__item-title {
     @include davidLibre-700;
-    font-style: normal;
-    font-weight: 700;
     font-size: 4.375rem;
-    color: $color-black;
+    font-weight: 700;
+    font-style: normal;
     line-height: 1;
     margin-top: 3em;
+    color: $color-black;
   }
+
   &__item-tex {
-    margin-top: 2.375em;
     max-width: 426px;
+    margin-top: 2.375em;
   }
+
   &__item-buttons {
-    margin-top: 3.125em;
     display: flex;
     gap: 0 25px;
+    margin-top: 3.125em;
   }
 
   &__item-socials {
-    margin-top: 3.875em;
+    position: relative;
     display: flex;
     gap: 0 17px;
-    position: relative;
+    margin-top: 3.875em;
   }
 
   &__item-socials::after {
     position: absolute;
-    content: "";
     top: 20px;
     left: 190px;
-    height: 3px;
     width: 143px;
+    height: 3px;
+    content: "";
     background-color: #d9d9d9;
   }
+
   &__item-img {
     object-fit: cover;
   }
 }
+
+// Promo /enter ------------------------------
+
+// About -------------------------------------
+.about {
+  background-color: #f3f4f4;
+
+  &-wripper {
+    background-image: url("../images/dishes/dish-bg2.png");
+    background-repeat: no-repeat;
+    background-position: 16em 2.1875em;
+    background-size: contain;
+  }
+
+  &__dishes-header {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__dishes-title {
+    @include davidLibre-700;
+    font-size: 3.75rem;
+    font-style: normal;
+    padding-top: 2em;
+    color: $color-black;
+  }
+
+  &__dishes-text {
+    display: inline-block;
+    max-width: 380px;
+    margin: 0 auto;
+    padding-top: 1.25em;
+    text-align: left;
+  }
+
+  &__dishes-menu {
+    display: flex;
+    gap: 0 30px;
+    justify-content: space-between;
+    padding-top: 13em;
+  }
+}
+
+.dishes-menu__item {
+  position: relative;
+  padding-top: 6.6875em;
+  transition: all 0.3s;
+  text-align: center;
+  border: 2px solid $color-white;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 60px;
+  background-color: transparent;
+}
+
+.dishes-menu__item:hover {
+  background-color: $color-white;
+}
+
+.dishes-menu__img {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dishes-menu__price {
+  @include inter-700;
+  font-size: 1rem;
+  font-style: normal;
+  position: absolute;
+  top: -59px;
+  right: 13px;
+  width: 54px;
+  height: 54px;
+  padding: 10px;
+  color: $color-white;
+  border-radius: 50%;
+  background-color: $color-black;
+}
+
+.dishes-menu__title {
+  @include davidLibre-700;
+  font-size: 1.25rem;
+  font-style: normal;
+  padding-top: 2em;
+  color: $color-black;
+}
+
+.dishes-menu__description {
+  padding: 1.25em 0.625em 3.125em;
+}
+
+.welcome__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 9.375em;
+}
+
+.welcome__item {
+  padding-bottom: 18.75em;
+
+  &-img {
+    max-width: 768px;
+    height: 100%;
+  }
+
+  &-title {
+    @include davidLibre-700;
+    font-size: 3.75em;
+    font-style: normal;
+    line-height: 65px;
+    padding-top: 4em;
+    color: $color-black;
+  }
+
+  &-text {
+    @include inter-400;
+    font-size: 1rem;
+    max-width: 380px;
+    padding-top: 1.875em;
+  }
+
+  &-btn {
+    display: flex;
+    gap: 0 20px;
+    padding-top: 1.875em;
+  }
+}
+
+// About /end --------------------------------
 
 // --------------------- Адаптив сайту ------------------
 @import "media";

@@ -42,18 +42,20 @@ $color-yellow: rgb(255, 187, 0);
   @include davidLibre-500;
   font-size: 1.25rem;
   color: $color-white;
-  padding: 0.875em 2.25em;
+  padding: 0.675em 2.25em;
   background-color: $color-accent;
   border-bottom-right-radius: 1.25em;
   border-top-left-radius: 1.25em;
+  text-align: center;
 }
 
 @mixin menu-btn {
   @include davidLibre-500;
   font-size: 1.25rem;
   color: $color-white;
-  padding: 0.875em 2.25em;
+  padding: 0.675em 2.25em;
   background-color: $color-black;
   border-bottom-right-radius: 1.25em;
   border-top-left-radius: 1.25em;
+  text-align: center;
 }
