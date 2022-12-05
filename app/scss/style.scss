@@ -112,9 +112,7 @@
   }
 
   &__item-buttons {
-    display: flex;
-    gap: 0 25px;
-    margin-top: 3.125em;
+    padding-top: 3.125em;
   }
 
   &__item-socials {
@@ -152,12 +150,12 @@
     background-size: contain;
   }
 
-  &__dishes-header {
+  &__header {
     margin: 0 auto;
     text-align: center;
   }
 
-  &__dishes-title {
+  &__header-title {
     @include davidLibre-700;
     font-size: 3.75rem;
     font-style: normal;
@@ -165,7 +163,7 @@
     color: $color-black;
   }
 
-  &__dishes-text {
+  &__header-text {
     display: inline-block;
     max-width: 380px;
     margin: 0 auto;
@@ -173,80 +171,80 @@
     text-align: left;
   }
 
-  &__dishes-menu {
+  &__menu {
     display: flex;
     gap: 0 30px;
     justify-content: space-between;
     padding-top: 13em;
   }
-}
 
-.dishes-menu__item {
-  position: relative;
-  padding-top: 6.6875em;
-  transition: all 0.3s;
-  text-align: center;
-  border: 2px solid $color-white;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 60px;
-  background-color: transparent;
-}
+  &__menu-item {
+    position: relative;
+    padding-top: 6.6875em;
+    transition: all 0.3s;
+    text-align: center;
+    border: 2px solid $color-white;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 60px;
+    background-color: transparent;
 
-.dishes-menu__item:hover {
-  background-color: $color-white;
-}
+    &:hover {
+      background-color: $color-white;
+    }
+  }
 
-.dishes-menu__img {
-  position: absolute;
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+  &__menu-img {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-.dishes-menu__price {
-  @include inter-700;
-  font-size: 1rem;
-  font-style: normal;
-  position: absolute;
-  top: -59px;
-  right: 13px;
-  width: 54px;
-  height: 54px;
-  padding: 10px;
-  color: $color-white;
-  border-radius: 50%;
-  background-color: $color-black;
-}
+  &__menu-price {
+    @include inter-700;
+    font-size: 1rem;
+    font-style: normal;
+    position: absolute;
+    top: -59px;
+    right: 13px;
+    width: 54px;
+    height: 54px;
+    padding: 10px;
+    color: $color-white;
+    border-radius: 50%;
+    background-color: $color-black;
+  }
 
-.dishes-menu__title {
-  @include davidLibre-700;
-  font-size: 1.25rem;
-  font-style: normal;
-  padding-top: 2em;
-  color: $color-black;
-}
+  &__menu-title {
+    @include davidLibre-700;
+    font-size: 1.25rem;
+    font-style: normal;
+    padding-top: 2em;
+    color: $color-black;
+  }
 
-.dishes-menu__description {
-  padding: 1.25em 0.625em 3.125em;
-}
+  &__menu-description {
+    padding: 1.25em 0.625em 3.125em;
+  }
 
-.welcome__inner {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 9.375em;
-}
+  &__restaurant__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 9.375em;
+  }
 
-.welcome__item {
-  padding-bottom: 18.75em;
+  &__restaurant-item {
+    padding-bottom: 18.75em;
+  }
 
-  &-img {
+  &__restaurant-img {
     max-width: 768px;
     height: 100%;
   }
 
-  &-title {
+  &__restaurant-title {
     @include davidLibre-700;
     font-size: 3.75em;
     font-style: normal;
@@ -255,16 +253,14 @@
     color: $color-black;
   }
 
-  &-text {
+  &__restaurant-text {
     @include inter-400;
     font-size: 1rem;
     max-width: 380px;
     padding-top: 1.875em;
   }
 
-  &-btn {
-    display: flex;
-    gap: 0 20px;
+  &__restaurant-buttons {
     padding-top: 1.875em;
   }
 }
