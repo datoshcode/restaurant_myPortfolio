@@ -53,7 +53,7 @@
 // Promo -----------------------------
 .promo {
   padding-bottom: 150px;
-  background-image: url("../images/promo/promo-bg.jpg");
+  background-image: url("../images/promo/promo_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -64,10 +64,7 @@
     gap: 0 1em;
     justify-content: center;
     padding: 22.25em 0.625em 1.25em;
-    background-image: url("../images/promo/promo-bg.png");
-    background-repeat: no-repeat;
-    background-position: top 83% right 4%;
-    background-size: 58%;
+    background: url("../images/promo/promo_bg.png") top 83% right 4%/ 58% no-repeat;
 
     &::after {
       position: absolute;
@@ -76,8 +73,7 @@
       width: 364px;
       height: 364px;
       content: "";
-      background-image: url("../images/promo/promo-top.png");
-      background-repeat: no-repeat;
+      background-image: url("../images/promo/promo_top.png") no-repeat;
     }
 
     &::before {
@@ -87,8 +83,7 @@
       width: 113px;
       height: 112px;
       content: "";
-      background-image: url("../images/promo/slogan.svg");
-      background-repeat: no-repeat;
+      background-image: url("../images/promo/slogan.svg") no-repeat;
     }
   }
 
@@ -141,13 +136,11 @@
 
 // About -------------------------------------
 .about {
-  background-color: #f3f4f4;
+  background-color: $color-grey;
 
   &-wripper {
-    background-image: url("../images/dishes/dish-bg2.png");
-    background-repeat: no-repeat;
-    background-position: 16em 2.1875em;
-    background-size: contain;
+    background: url("../images/dishes/dish_bg2.png") 16em 2.1875em / contain
+      no-repeat;
   }
 
   &__header {
@@ -267,6 +260,16 @@
 
 // Chef --------------------------------------
 .chef {
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 5em;
+    left: 1em;
+    width: 100%;
+    height: 100%;
+    background: url("../images/chef/chef_element_bg.png") no-repeat;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -315,6 +318,152 @@
 }
 
 // Chef /end ---------------------------------
+
+// Comments slider
+
+.comments {
+  background-color: $color-grey;
+  position: relative;
+  &__header {
+    text-align: center;
+  }
+  &__title {
+    padding-top: 2em;
+  }
+  &__text {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 380px;
+    padding-top: 1em;
+  }
+  &__slider {
+    padding-top: 9.125em;
+  }
+}
+.comments::after {
+  position: absolute;
+  content: "";
+  top: 7em;
+  left: -8em;
+  width: 755px;
+  height: 100%;
+  background-image: url("../images/comments/comments-bg.png");
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+
+  &-wrapper {
+    gap: 0 50px;
+    margin-bottom: 6.25em;
+  }
+
+  &-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    position: relative;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  &-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-slide {
+    width: 41%;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 40px;
+    background-color: $color-white;
+    filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.07));
+    margin-right: 35px;
+  }
+
+  &-slide:first-child {
+    margin-left: 33%;
+  }
+
+  &-slide__item {
+    max-width: 410px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    padding: 8em 1.125em 3em;
+  }
+
+  &-slide__user dd {
+    font-weight: 700;
+    color: $color-black;
+    padding-top: 2em;
+  }
+
+  &-slide__text,
+  &-slide__user dd {
+    font-size: 1rem;
+  }
+
+  &-slide img {
+    width: 109px;
+    height: 109px;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  &-slide__avatar {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 109px;
+    height: 109px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  &-pagination-bullet-active {
+    background-color: $color-accent;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 10px);
+}
+
+.swiper-pagination-bullet {
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 5px)
+  );
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size, 5px)
+  );
+}
+
+// Comments slider /end
 
 // --------------------- Адаптив сайту ------------------
 @import "media";
