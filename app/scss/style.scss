@@ -324,6 +324,7 @@
 .comments {
   background-color: $color-grey;
   position: relative;
+  padding-bottom: 20em;
   &__header {
     text-align: center;
   }
@@ -338,6 +339,7 @@
   }
   &__slider {
     padding-top: 9.125em;
+    padding-bottom: 3em;
   }
 }
 .comments::after {
@@ -347,7 +349,7 @@
   left: -8em;
   width: 755px;
   height: 100%;
-  background-image: url("../images/comments/comments-bg.png");
+  background: url("../images/comments/comments-bg.png") no-repeat;
 }
 .swiper {
   width: 100%;
@@ -377,16 +379,7 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
-  }
 
-  &-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &-slide {
     width: 41%;
     border-top-left-radius: 100px;
     border-top-right-radius: 40px;
@@ -395,6 +388,13 @@
     background-color: $color-white;
     filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.07));
     margin-right: 35px;
+  }
+
+  &-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &-slide:first-child {
@@ -406,12 +406,16 @@
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
-    padding: 8em 1.125em 3em;
+    padding: 4em 1.125em 3em;
   }
 
   &-slide__user dd {
     font-weight: 700;
     color: $color-black;
+    padding-top: 2em;
+  }
+
+  &-slide__text {
     padding-top: 2em;
   }
 
@@ -463,6 +467,22 @@
   );
 }
 
+.swiper-slide__stars {
+  display: inline-block;
+  font-size: 0;
+}
+.swiper-slide__stars span {
+  padding: 0;
+  font-size: 30px;
+  line-height: 1;
+  color: lightgrey;
+}
+.swiper-slide__stars > span:before {
+  content: "★";
+}
+.swiper-slide__stars > span.active {
+  color: $color-yellow;
+}
 // Comments slider /end
 
 // --------------------- Адаптив сайту ------------------
