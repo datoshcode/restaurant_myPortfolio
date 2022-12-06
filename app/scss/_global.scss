@@ -5,6 +5,14 @@ body {
   color: $color-default;
 }
 
+.header-title {
+  @include davidLibre-700;
+  font-style: normal;
+  font-size: 3.75rem;
+  line-height: 65px;
+  color: $color-black;
+}
+
 .big-container {
   @include container;
   max-width: 1500px;
