@@ -537,8 +537,105 @@
     padding: 0.675em 2.25em;
   }
 }
-
 // Subscribe /end
+
+// Footer
+.footer {
+  padding-bottom: 5em;
+  background-image: url("../images/footer/footer_bg.png");
+  background-repeat: no-repeat;
+  background-position: 25em 18em;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22em;
+    gap: 0 20px;
+    width: 100%;
+    padding-bottom: 10em;
+  }
+
+  &__dishes-list,
+  &__navigation-list {
+    list-style: none;
+  }
+
+  &__title {
+    font-size: 12;
+    @include inter-700;
+    color: $color-black;
+    text-transform: uppercase;
+  }
+
+  &__item-logo {
+    max-width: 450px;
+  }
+
+  &__item-nav {
+    max-width: 145px;
+    margin-top: 1em;
+  }
+
+  &__item-social {
+    margin-top: 1em;
+  }
+
+  &__text {
+    padding-top: 1em;
+  }
+
+  &__text-link {
+    text-decoration: underline;
+  }
+
+  &__navigation-list,
+  &__dishes-list,
+  &__item-socials,
+  &__openhours {
+    padding-top: 1em;
+  }
+
+  &__title-openhours {
+    padding-top: 3em;
+  }
+
+  &__uppercase {
+    text-transform: uppercase;
+  }
+
+  &__dishes-item + li,
+  &__navigation-item + li {
+    padding-top: 1em;
+  }
+
+  &__social-link + a {
+    padding-left: 1em;
+  }
+
+  &__openhours {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copy {
+    display: flex;
+    justify-content: space-between;
+    border-top: 3px solid $color-grey;
+    padding-top: 2em;
+  }
+
+  &__terms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 3em;
+  }
+
+  &__terms p {
+    margin-top: 0;
+  }
+}
+
+// Footer /end
 
 // --------------------- Адаптив сайту ------------------
 @import "media";
