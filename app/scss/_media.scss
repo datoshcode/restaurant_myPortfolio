@@ -1,0 +1,293 @@
+// --- 1100px ---
+@media (max-width: 1100px) {
+  .about__restaurant__inner {
+    flex-wrap: wrap;
+  }
+
+  .about__restaurant-img {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .about__restaurant-item {
+    padding-bottom: 5.75em;
+  }
+
+  .about__restaurant-title {
+    padding-top: 0;
+  }
+}
+
+// --- 980px ---
+@media (max-width: 980px) {
+  .about__menu-price {
+    right: -15px;
+  }
+}
+
+// --- 925px ---
+@media (max-width: 925px) {
+  .footer__inner {
+    display: block;
+  }
+  .footer__item-nav,
+  .footer__item-social {
+    margin-top: 4em;
+  }
+}
+
+// --- 830px ---
+@media (max-width: 830px) {
+  .header__menu {
+    order: 1;
+    margin-left: 40px;
+    .menu-btn {
+      display: block;
+    }
+
+    &-list {
+      transform: translateY(-200%);
+      position: absolute;
+      top: 150px;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      z-index: -1;
+      transition: all 0.3s;
+      background-color: $color-white;
+      padding-bottom: 10px;
+      box-shadow: 5px 5px 17px;
+    }
+  }
+  .promo__inner {
+    flex-wrap: wrap;
+  }
+
+  .promo__inner::before {
+    display: none;
+  }
+
+  .menu__list--active {
+    transform: translateY(0);
+  }
+
+  .menu-list__item + .menu-list__item {
+    padding-left: 15px;
+    transition: all 0.3s;
+  }
+
+  .menu-list__item {
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .menu-list__link {
+    padding: 12px 0;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .promo__item-title {
+    margin-top: 0;
+  }
+
+  .promo__item-img {
+    margin-top: 4em;
+  }
+
+  .about__menu {
+    flex-wrap: wrap;
+  }
+
+  .about__menu-item {
+    margin: 0 auto;
+  }
+
+  .about__menu-price {
+    right: 145px;
+  }
+
+  .about__menu {
+    gap: 124px 0;
+  }
+}
+
+// --- 800 ---
+@media (max-width: 800px) {
+  .chef__image {
+    display: none;
+  }
+
+  .chef__offers-list {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
+  .chef__offers-buttons {
+    margin-left: 0;
+  }
+
+  .about__menu-price {
+    right: 110px;
+  }
+}
+
+// --- 700 ---
+@media (max-width: 700px) {
+  .subscribe__title {
+    font-size: 35px;
+    line-height: 58px;
+  }
+
+  .comments {
+    padding-bottom: 19em;
+  }
+
+  .subscribe__form {
+    margin-top: 9em;
+    border: 1px solid $color-grey;
+  }
+}
+
+// --- 600 ---
+@media (max-width: 600px) {
+  .swiper-slide {
+    width: 60%;
+  }
+
+  .footer__item-logo {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .footer__item-logo {
+    width: 100%;
+  }
+
+  .footer__item-nav,
+  .footer__item-social {
+    margin: 0 auto;
+    margin-top: 4em;
+    text-align: center;
+  }
+
+  .footer__copy,
+  .footer__terms {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .footer__terms {
+    max-width: 170px;
+    padding-top: 1em;
+  }
+}
+
+// --- 500px ---
+@media (max-width: 500px) {
+  .menu-btn__link {
+    display: none;
+  }
+  .promo__item-title {
+    font-size: 3.375em;
+  }
+
+  .about__menu-item {
+    display: block;
+    width: 100%;
+  }
+
+  .header-title {
+    font-size: 2.75rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .about__restaurant__inner {
+    justify-content: center;
+  }
+
+  .about__restaurant__inner {
+    padding-top: 6.375em;
+  }
+
+  .chef__inner {
+    padding-top: 2.875em;
+  }
+}
+
+// ---- 470 ----
+@media (max-width: 470px) {
+  .subscribe__boxform {
+    top: -152px;
+  }
+}
+
+// ---- 440 ----
+@media (max-width: 440px) {
+  .subscribe__input {
+    width: 58%;
+  }
+}
+
+// --- 420 ---
+@media (max-width: 420px) {
+  .about__menu-price {
+    right: 60px;
+  }
+}
+
+// --- 400 ---
+@media (max-width: 400px) {
+  .promo__item-socials::after {
+    display: none;
+  }
+
+  .book-btn {
+    margin: 0 auto;
+  }
+
+  .promo__item-title {
+    text-align: center;
+    font-size: 3.375em;
+  }
+
+  .promo__item-socials {
+    justify-content: center;
+  }
+
+  .promo__item-tex {
+    margin-top: 2em;
+  }
+
+  .promo__item-buttons {
+    padding-top: 1.125em;
+  }
+
+  .promo {
+    padding-bottom: 5.375em;
+  }
+
+  .about__menu-price {
+    text-align: center;
+  }
+
+  .swiper-slide {
+    width: 100%;
+  }
+
+  .swiper-wrapper {
+    gap: 0 9%;
+  }
+}
+
+//  --- 350 ---
+@media (max-width: 350px) {
+  .header-title {
+    font-size: 2rem;
+  }
+}

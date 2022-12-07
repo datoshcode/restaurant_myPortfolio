@@ -27,8 +27,9 @@ body {
   @include book-btn;
 }
 
+.dishes-menu-btn,
 .menu-btn {
-  @include menu-btn;
+  @include dishes-menu-btn;
 }
 
 .box-buttons {
