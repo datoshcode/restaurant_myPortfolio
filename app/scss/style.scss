@@ -48,15 +48,51 @@
   }
 }
 
+// Кнопка меню-бургер для адаптива
+.menu-btn {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: $color-accent;
+  padding: 9px 4px;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  &::before {
+    top: 13px;
+  }
+
+  &::after {
+    bottom: 13px;
+  }
+  span {
+    display: block;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+}
+
 // Header /end -----------------------
 
 // Promo -----------------------------
 .promo {
-  padding-bottom: 150px;
-  background-image: url("../images/promo/promo_bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  padding-bottom: 9.375em;
+  background-image: url("../images/promo/promo_bg.jpg") center no-repeat / cover;
 
   &__inner {
     position: relative;
@@ -64,17 +100,8 @@
     gap: 0 1em;
     justify-content: center;
     padding: 22.25em 0.625em 1.25em;
-    background: url("../images/promo/promo_bg.png") top 83% right 4%/ 58% no-repeat;
-
-    &::after {
-      position: absolute;
-      bottom: 1.5em;
-      left: 37em;
-      width: 364px;
-      height: 364px;
-      content: "";
-      background-image: url("../images/promo/promo_top.png") no-repeat;
-    }
+    background: url("../images/promo/promo_bg.png") top 83% right -2%/ 58%
+      no-repeat;
 
     &::before {
       position: absolute;
@@ -83,7 +110,7 @@
       width: 113px;
       height: 112px;
       content: "";
-      background-image: url("../images/promo/slogan.svg") no-repeat;
+      background: url("../images/promo/slogan.svg") no-repeat;
     }
   }
 
@@ -104,10 +131,12 @@
   &__item-tex {
     max-width: 426px;
     margin-top: 2.375em;
+    overflow: hidden;
+    height: 6em;
   }
 
   &__item-buttons {
-    padding-top: 3.125em;
+    padding-top: 2.125em;
   }
 
   &__item-socials {
@@ -139,7 +168,7 @@
   background-color: $color-grey;
 
   &-wripper {
-    background: url("../images/dishes/dish_bg2.png") 16em 2.1875em / contain
+    background: url("../images/dishes/dish_bg.png") 16em 2.1875em / contain
       no-repeat;
   }
 
@@ -218,6 +247,9 @@
 
   &__menu-description {
     padding: 1.25em 0.625em 3.125em;
+    overflow: hidden;
+    max-width: 37em;
+    min-height: 7em;
   }
 
   &__restaurant__inner {
@@ -233,6 +265,7 @@
   &__restaurant-img {
     max-width: 768px;
     height: 100%;
+    width: 100%;
   }
 
   &__restaurant-title {
@@ -249,6 +282,8 @@
     font-size: 1rem;
     max-width: 380px;
     padding-top: 1.875em;
+    overflow: hidden;
+    height: 8em;
   }
 
   &__restaurant-buttons {
@@ -417,6 +452,8 @@
 
   &-slide__text {
     padding-top: 2em;
+    overflow: hidden;
+    height: 11em;
   }
 
   &-slide__text,
@@ -551,7 +588,11 @@
     padding-top: 22em;
     gap: 0 20px;
     width: 100%;
-    padding-bottom: 10em;
+    padding-bottom: 6em;
+  }
+  &__menu {
+    display: flex;
+    gap: 0 100px;
   }
 
   &__dishes-list,
