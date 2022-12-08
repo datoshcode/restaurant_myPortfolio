@@ -100,7 +100,8 @@
     gap: 0 1em;
     justify-content: center;
     padding: 22.25em 0.625em 1.25em;
-    background: url("../images/promo/promo_bg.png") top 83% right 4%/ 58% no-repeat;
+    background: url("../images/promo/promo_bg.png") top 83% right -2%/ 58%
+      no-repeat;
 
     &::before {
       position: absolute;
@@ -167,7 +168,7 @@
   background-color: $color-grey;
 
   &-wripper {
-    background: url("../images/dishes/dish_bg2.png") 16em 2.1875em / contain
+    background: url("../images/dishes/dish_bg.png") 16em 2.1875em / contain
       no-repeat;
   }
 
@@ -577,7 +578,7 @@
 
 // Footer
 .footer {
-  padding-bottom: 10em;
+  padding-bottom: 5em;
   background-image: url("../images/footer/footer_bg.png");
   background-repeat: no-repeat;
   background-position: 25em 18em;
@@ -588,6 +589,10 @@
     gap: 0 20px;
     width: 100%;
     padding-bottom: 6em;
+  }
+  &__menu {
+    display: flex;
+    gap: 0 100px;
   }
 
   &__dishes-list,

@@ -16,6 +16,38 @@
   .about__restaurant-title {
     padding-top: 0;
   }
+
+  .footer__inner {
+    display: block;
+  }
+
+  .footer__item-logo {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer__item-social {
+    text-align: center;
+  }
+
+  .footer__title-openhours {
+    text-align: center;
+  }
+
+  .footer__openhours {
+    justify-content: center;
+    gap: 0 50px;
+  }
+
+  .footer__menu {
+    justify-content: center;
+    padding-top: 2em;
+  }
+
+  .footer__item-social {
+    margin-top: 2em;
+  }
 }
 
 // --- 980px ---
@@ -27,9 +59,6 @@
 
 // --- 925px ---
 @media (max-width: 925px) {
-  .footer__inner {
-    display: block;
-  }
   .footer__item-nav,
   .footer__item-social {
     margin-top: 4em;
@@ -218,6 +247,18 @@
   .chef__inner {
     padding-top: 2.875em;
   }
+
+  .swiper-slide {
+    width: 100%;
+  }
+
+  .swiper-wrapper {
+    gap: 0 9%;
+  }
+
+  .swiper-slide:first-child {
+    margin-left: 0;
+  }
 }
 
 // ---- 470 ----
@@ -274,14 +315,6 @@
 
   .about__menu-price {
     text-align: center;
-  }
-
-  .swiper-slide {
-    width: 100%;
-  }
-
-  .swiper-wrapper {
-    gap: 0 9%;
   }
 }
 
